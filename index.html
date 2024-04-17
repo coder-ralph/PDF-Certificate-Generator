@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/images/favicon.png">
+</head>
+<body>
+  <!-- Image and text -->
+  <nav class="navbar">
+    <img src="./assets/images/freeCodeCamp_red_logo.png" class="logo-img" alt="logo-img">
+    <span class="navbar-text m-auto">
+      <span class="heading">freeCodeCamp</span> Certificate Generator</span>
+      <!-- <p class="head">Certificate Generator</p> -->
+  </nav>
+  <div class="box">
+    <form  id="certificate-form">
+      <h1>Certificate Request!</h1>
+      <input for="name" type="text" name="userName" placeholder="Enter your name..." class="form-control" id="name" required autocomplete="off" autofocus>
+      <button id="submit" type="submit" >GET CERTIFICATE</button>
+    </form>
+    <!-- Certificate Sample -->
+    <img class="sample" src="./assets/images/sample.png" alt="sample-img">
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col aboutus">
+        <h2>About Us</h2>
+        <p>A Certificate Generator for FCC Antique Bootcamper. This little project was created for students who have attended and completed the bootcamp.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Copyright &#169; 2023 All Rights Reserved.</p>
+    <p>Made with ❤️ by <span class="author"><a href='https://github.com/coder-ralph/' target='_blank' rel='noopener noreferrer'>Ralph Rosael</a></span></p>
+  </div>
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+  <script src="filesaver.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
