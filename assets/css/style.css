@@ -55,7 +55,7 @@ section {
 /* For mobile devices, adjust the font size */
 @media (max-width: 768px) {
 	.hero-title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 }
 
