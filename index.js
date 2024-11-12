@@ -120,3 +120,38 @@ const generateCertificate = async (name) => {
 const generateCertificateId = () => {
   return 'AXM' + Math.random().toString(36).substr(2, 20);
 };
+
+// Scroll to top button
+const scrollToTopBtn = document.createElement('div');
+scrollToTopBtn.classList.add('scroll-to-top');
+scrollToTopBtn.innerHTML = '&uarr;';
+document.body.appendChild(scrollToTopBtn);
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Show/hide navbar on scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = '-70px';
+  } else {
+    navbar.style.top = '0';
+  }
+  lastScrollTop = scrollTop;
+});

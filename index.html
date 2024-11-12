@@ -15,115 +15,113 @@
   <link rel="icon" href="./assets/images/favicon.png">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <span class="heading">Certificate </span> Generator
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <span class="heading">Certificate </span> Generator
+        </a>
+        <a class="nav-link" href="https://github.com/coder-ralph/PDF-Certificate-Generator" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   
-  <section id="home" class="py-5">
-    <div class="container">
-      <h1 class="text-center mb-5 hero-title">Celebrate <span class="underline">Success</span> Now</h1>
-      <div class="row">
-        <!-- Form Column 1 -->
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title text-center mb-4">Generate Single Certificate</h3>
-              <form id="single-certificate-form">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="userName" placeholder="Enter your name..." required autocomplete="off" autofocus>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Generate Single Certificate</button>
-              </form>
+  <main>
+    <section id="home" class="py-5">
+      <div class="container">
+        <h1 class="text-center mb-5 hero-title">Celebrate <span class="underline">Success</span> Now</h1>
+        <div class="row">
+          <!-- Form Column 1 -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-center mb-4">For Single Certificate</h3>
+                <form id="single-certificate-form">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="userName" placeholder="Enter your name..." required autocomplete="off" autofocus>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100" id="generate-single">
+                    <span class="button-text">Generate Single Certificate</span>
+                    <div class="circle-loader d-none"></div>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Form Column 2 -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-center mb-4">For Multiple Certificates</h3>
+                <form id="multiple-certificate-form">
+                  <div class="mb-3">
+                    <label for="file" class="form-label">Upload Excel file</label>
+                    <input type="file" class="form-control" id="file" accept=".xlsx, .xls" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100" id="generate-multiple">
+                    <span class="button-text">Generate Multiple Certificates</span>
+                    <div class="circle-loader d-none"></div>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-  
-        <!-- Form Column 2 -->
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title text-center mb-4">Generate Multiple Certificates</h3>
-              <form id="multiple-certificate-form">
-                <div class="mb-3">
-                  <label for="file" class="form-label">Upload Excel file</label>
-                  <input type="file" class="form-control" id="file" accept=".xlsx, .xls" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Generate Multiple Certificates</button>
-              </form>
+    
+        <!-- Centered Certificate Image -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6">
+            <div class="certificate-animation text-center">
+              <img class="img-fluid rounded shadow-lg" src="./assets/images/sample.png" alt="sample-img">
             </div>
           </div>
         </div>
       </div>
-  
-      <!-- Centered Certificate Image -->
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-6">
-          <div class="certificate-animation text-center">
-            <img class="img-fluid rounded shadow-lg" src="./assets/images/sample.png" alt="sample-img">
+    </section>
+    
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="./assets/images/freeCodeCamp_red_logo.png" class="img-fluid rounded-circle about-logo" alt="freeCodeCamp logo" draggable="false">
+          </div>
+          <div class="col-md-8">
+            <h2 class="mb-4">About Us</h2>
+            <div class="about-text">
+              <p>Welcome to the Certificate Generator, a project born out of passion for education and technology. Our mission is to provide a seamless and efficient way for students who have completed the training to receive their well-deserved certificates.</p>
+              <p>This tool is designed to streamline the certificate generation process, allowing students to quickly obtain proof of their hard work and dedication. We believe in the power of accessible education and the impact it can have on individuals and communities.</p>
+              <p>Our Certificate Generator is not just a tool; it's a celebration of achievement and a gateway to new opportunities. We're committed to supporting the community and empowering learners on their journey to becoming skilled developers.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
 
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center mb-4 mb-md-0">
-          <img src="./assets/images/freeCodeCamp_red_logo.png" class="img-fluid rounded-circle about-logo" alt="freeCodeCamp logo">
-        </div>
-        <div class="col-md-8">
-          <h2 class="mb-4">About Us</h2>
-          <p>Welcome to the FCC Antique Bootcamper Certificate Generator, a project born out of passion for education and technology. Our mission is to provide a seamless and efficient way for students who have completed the freeCodeCamp Antique Bootcamp to receive their well-deserved certificates.</p>
-          <p>This tool is designed to streamline the certificate generation process, allowing students to quickly obtain proof of their hard work and dedication. We believe in the power of accessible education and the impact it can have on individuals and communities.</p>
-          <p>Our Certificate Generator is not just a tool; it's a celebration of achievement and a gateway to new opportunities. We're committed to supporting the freeCodeCamp community and empowering learners on their journey to becoming skilled developers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <h2 class="text-center mb-4">Contact Us</h2>
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer mt-5">
     <div class="container text-center">
